@@ -14,7 +14,7 @@ jobs:
              rm -f package-lock.json
              npm cache clean --force
              cd /home/tinku/Desktop/sample
-             export APP_API_URL="http://ror-env.eba-gfc3xmdx.ap-south-1.elasticbeanstalk.com/api"
+             export APP_API_URL="http://core-env.eba-baaiwawd.ap-south-1.elasticbeanstalk.com/"
              npm install
              npm update
              quasar build
