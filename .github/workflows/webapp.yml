@@ -12,4 +12,5 @@ jobs:
         run: | 
              export APP_API_URL="http://ror-env.eba-gfc3xmdx.ap-south-1.elasticbeanstalk.com/api"
              npm install
+             npm update
              quasar build
