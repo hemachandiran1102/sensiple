@@ -10,6 +10,9 @@ jobs:
       - uses: actions/checkout@v3
       - name: aws sample app
         run: | 
+             rm -rf node_modules
+             rm -f package-lock.json
+             npm cache clean --force
              export APP_API_URL="http://ror-env.eba-gfc3xmdx.ap-south-1.elasticbeanstalk.com/api"
              npm install
              npm update
