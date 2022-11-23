@@ -13,7 +13,12 @@ jobs:
              rm -rf node_modules
              rm -f package-lock.json
              npm cache clean --force
+             cd /home/tinku/Desktop/sample
              export APP_API_URL="http://ror-env.eba-gfc3xmdx.ap-south-1.elasticbeanstalk.com/api"
              npm install
              npm update
              quasar build
+             aws s3 cp dist/spa/ s3://webapp1102 --recursive
+             aws cloudfront create-invalidation --distribution-id E39OIVD8TRHO0U --paths "/*"
+             
+             
