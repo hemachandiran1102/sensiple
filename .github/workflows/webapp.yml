@@ -14,7 +14,7 @@ jobs:
              rm -f package-lock.json
              npm cache clean --force
              npm install
-             npm update
+             #npm update
              quasar build
              aws s3 cp dist/spa/ s3://sensipletestapp1 --recursive --profile s3-deploy
              
